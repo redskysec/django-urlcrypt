@@ -1,10 +1,11 @@
 from django import template
 from django.contrib.sites.models import Site
-from django.core.urlresolvers import reverse
+#from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.template.defaulttags import URLNode
 
-from urlcrypt.conf import RUNNING_TESTS
-from urlcrypt.lib import generate_login_token
+from apps.libraries.urlcrypt.conf import RUNNING_TESTS
+from apps.libraries.urlcrypt.lib import generate_login_token
 
 register = template.Library()
 

@@ -1,6 +1,15 @@
 django-urlcrypt
 =================
 
+Modified to get it working in python3 django2 and up
+
+My strucutre was:
+from apps.libraries.urlcrypt
+
+you will probably need to change this
+
+-----------------
+
 django-urlcrypt encrypts information in urls, such as login credentials. 
 
 For example, assume I have url patterns that looks like this::

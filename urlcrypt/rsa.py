@@ -1,7 +1,7 @@
 import os
 
-from urlcrypt.conf import URLCRYPT_PRIVATE_KEY_PATH
-from urlcrypt.oaep import OAEP
+from apps.libraries.urlcrypt.conf import URLCRYPT_PRIVATE_KEY_PATH
+from apps.libraries.urlcrypt.oaep import OAEP
 
 # load the private key from the specified file
 from Crypto.PublicKey import RSA 

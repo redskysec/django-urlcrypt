@@ -10,13 +10,14 @@ except ImportError:
 
 from django.contrib.auth.models import User
 
-from urlcrypt.conf import SECRET_KEY, URLCRYPT_USE_RSA_ENCRYPTION
+from apps.libraries.urlcrypt.conf import SECRET_KEY, URLCRYPT_USE_RSA_ENCRYPTION
 
 if URLCRYPT_USE_RSA_ENCRYPTION:
-    import urlcrypt.rsa
+    import apps.libraries.urlcrypt.rsa
 
 # generate a key for obfuscation
 # kind of ghetto, is there a better way to do this other than os.urandom?
+SECRET_KEY = SECRET_KEY.encode('utf-8')
 OBFUSCATE_KEY = hashlib.sha512(SECRET_KEY).digest() + hashlib.sha512(SECRET_KEY[::-1]).digest()
 
 def base64url_encode(text):

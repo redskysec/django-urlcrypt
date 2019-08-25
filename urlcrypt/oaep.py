@@ -139,7 +139,7 @@ def test_oaep():
                 j = -1
             else:
                 j = i % b           # byte to corrupt
-            print "test %s:%s (%s bytes, corrupt at %s)" % (k,i,b,j)
+            print ("test %s:%s (%s bytes, corrupt at %s)" % (k,i,b,j))
             msg = urandom(b)
             pmsg = p.encode(k,msg)
             #  Test that padding actually does something
